@@ -10,6 +10,10 @@ describe('locationToIndex', function() {
     var src = 'var a=1;\r\n2\n3\r4var b=2;'
     expect(lib.locationToIndex(src, 14, 2)).equal(24)
   })
+  it('multiple consecutive \r\n', function() {
+    var src = 'var a=1;\r\n\r\n3\n4\r5var b=2;'
+    expect(lib.locationToIndex(src, 5, 2)).equal(16)
+  })
 })
 
 describe('indexToLocation', function() {
