@@ -14,7 +14,9 @@ npm install src-location
 
 ## Usage
 
-- **locationToIndex(srcStr: string, line: number, column: number) -> number**
+- **locationToIndex(srcStr: string, line: number, column: number, noMergeCRLF) -> number**
+
+> noMergeCRLF: will **not** merge CRLF as 1 char.
 
 ``` javascript
 var lib = require('src-location')
@@ -23,6 +25,8 @@ expect(lib.locationToIndex(src, 4, 2)).equal(15)
 ```
 
 - **indexToLocation(srcStr: string, index: number) -> {line: number, column: number}**
+
+> noMergeCRLF: will **not** merge CRLF as 1 char.
 
 ``` javascript
 var lib = require('src-location')
