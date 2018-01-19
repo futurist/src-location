@@ -1,6 +1,6 @@
 {
   "name": "src-location",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Convert source location from line and column to index position (character offset), and vise versa.",
   "main": "index.js",
   "directories": {
